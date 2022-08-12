@@ -1,7 +1,12 @@
-import React from 'react';
+import { AppProvider } from '@/providers';
+import { AppRoutes } from '@/routes';
 
 function App() {
-  return <div>Hello App</div>;
+  return (
+    <AppProvider>
+      <AppRoutes />
+    </AppProvider>
+  );
 }
 
 export default App;
