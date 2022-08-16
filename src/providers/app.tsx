@@ -1,8 +1,8 @@
-import * as React from 'react';
+import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 
-import { theme, GlobalStyles } from '@/styles';
+import { GlobalStyles, theme } from '@/styles';
 
 type AppProviderProps = {
   children: React.ReactNode;
@@ -10,11 +10,9 @@ type AppProviderProps = {
 
 export const AppProvider = ({ children }: AppProviderProps) => {
   return (
-    <React.Suspense fallback={<div>Loading...</div>}>
-      <ThemeProvider theme={theme}>
-        <GlobalStyles />
-        <Router>{children}</Router>
-      </ThemeProvider>
-    </React.Suspense>
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      <Router>{children}</Router>
+    </ThemeProvider>
   );
 };

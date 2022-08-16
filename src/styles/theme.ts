@@ -48,6 +48,8 @@ export const theme = {
     black: '#2b2b2b',
     lightGray: '#9f9f9f',
     gray: '#5f5f5f',
+    error: '#ee4b2b',
+    green: '#71bb00',
   },
 };
 
